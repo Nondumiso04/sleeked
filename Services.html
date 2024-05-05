@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sleeked</title>
+
+  <style>
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative; 
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  z-index: 1000; 
+}
+header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-left: 40px; 
+      font-size: 25px;
+        font-weight: bold;
+    }
+
+    header nav ul li:first-child {
+      margin-left: 30%; 
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color:black;
+    }
+
+    header nav ul li a:hover {
+      color: rgb(230, 113, 168);
+    }
+
+.background-container {
+  position: relative;
+  height: 100%;
+  background-image: url('pictures/ThePinkLabelSalon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); 
+  z-index: -1; 
+}
+
+.content {
+  padding-top: 100px; 
+  color: white;
+}
+.background-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.positioned-image{
+    position: absolute;
+      top: 65%; 
+      left: 10px; 
+      transform: translateY(-50%); 
+      border-radius: 50%;
+      width: 80px; 
+      height: 80px; 
+      object-fit: cover;
+      z-index: 1;
+}
+.gallery{
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color:rgb(230, 113, 168);
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+    
+}
+.gallery a:hover{
+    color: white;
+}
+.services{
+    background-color:rgb(230, 113, 168);
+    height: 500px;
+}
+.services-desc{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+    text-underline-position: below;
+}
+.ponytails{
+  font-size: 29px;
+  font-weight: bold;
+}
+.ponytail1{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  top: 100%;
+  left: 2%;
+}
+.ponytail2{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  top: 100%;
+  left: 30%;
+}
+.ponytail3{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  top: 100%;
+  left: 60%;
+}
+.ponytail-desc{
+  position: absolute;
+    top: 150%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.half-up-half-down{
+  font-size: 29px;
+  font-weight: bold;
+  position: absolute;
+  top: 160%;
+}
+.half1{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  top: 175%;
+  left: 2%;
+  
+}
+.half2{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  top: 175%;
+  left: 30%;
+  
+}
+.half3{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  top: 175%;
+  left: 60%;
+ 
+}
+.sew-in{
+  font-size: 29px;
+  font-weight: bold;
+  position: absolute;
+  top: 230%;
+}
+.sew1{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  top: 245%;
+  left: 2%;
+}
+.sew2{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  top: 245%;
+  left: 30%;
+}
+.sew3{
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  top: 245%;
+  left: 60%;
+}
+.pricelist{
+  position: absolute;
+  top: 320%;
+  width: 400px;
+  height: 400px;
+}
+.note{
+  position: absolute;
+  top: 395%;
+  font-size: 29px;
+  font-weight: bold;
+  
+}
+.note-desc{
+  position: absolute;
+    top: 405%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.last{
+    background-color: rgb(230, 113, 168);
+    height: 500px;
+    position: relative;
+    top: 320%;
+}
+.last-header{
+  position: absolute;
+    top: 1%;
+    left: 35%;
+    color: white;
+    text-underline-position: below;
+}
+.last-par1{
+  position: absolute;
+    top: 10%;
+    left: 20%;
+    color: white;
+    
+}
+.book2{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: white;
+    color: black; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+.contactUs{
+  position: absolute;
+    top: 35%;
+    left: 39%;
+    color: white;
+    
+}
+.address{
+  position: absolute;
+    top: 45%;
+    left: 42%;
+    color: white;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 430px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  header nav ul li {
+    margin-left: 10px; 
+    font-size: 12px;
+  }
+
+  .positioned-image {
+    width: 60px; 
+    height: 60px; 
+  }
+
+  .gallery {
+    font-size: 12px;
+    padding: 3px 6px; 
+    left: 75%;
+  }
+
+  .about-desc {
+    font-size: 12px;
+    left: 40%;
+    top: 30%;
+  }
+
+
+  .about-pic1 {
+    width: 150px; 
+    height: 150px;
+    top: 75%;
+  }
+  .about1{
+    top: 65%;
+    font-size: 13px;
+  }
+  .about2{
+    top: 67%;
+    font-size: 12px;
+  }
+  .services{
+    font-size: 12px; /* Adjusted font size for mobile */
+  }
+  .services-desc {
+    font-size: 12px;
+    left: 40%;
+    top: 30%;
+  }
+  .ponytail1{
+    top: 60%;
+    width: 22%;
+    height: 15%;
+  }
+  .ponytail2{
+    top: 60%;
+    width: 22%;
+    height: 15%;
+    left: 30%;
+  }
+  .ponytail3{
+    top: 60%;
+    width: 22%;
+    height: 15%;
+    left: 60%;
+  }
+  .ponytail-desc{
+    top: 78%;
+  }
+  .half-up-half-down{
+    top: 88%;
+  }
+  .half1{
+    top: 95%;
+    width: 22%;
+    height: 15%;
+  }
+  .half2{
+    top: 95%;
+    width: 22%;
+    height: 15%;
+    left: 30%;
+  }
+  .half3{
+    top: 95%;
+    width: 22%;
+    height: 15%;
+    left: 60%;
+  }
+  .sew-in{
+    top: 110%;
+  }
+  .sew1{
+    top: 117%;
+    width: 22%;
+    height: 15%;
+  }
+  .sew2{
+    top: 117%;
+    width: 22%;
+    height: 15%;
+    left: 30%;
+  }
+  .sew3{
+    top: 117%;
+    width: 22%;
+    height: 15%;
+    left: 60%;
+  }
+  .pricelist{
+    top: 140%;
+  }
+  .note{
+    top: 187%;
+  }
+  .note-desc{
+    top: 195%
+  }
+
+  .book {
+    font-size: 12px; /* Adjusted font size for mobile */
+    padding: 3px 6px; /* Adjusted padding for mobile */
+    top: 78%;
+  }
+
+  
+
+  .last-header, .last-par1, .contactUs, .address {
+    font-size: 12px; /* Adjusted font size for mobile */
+  }
+
+  .book2 {
+    font-size: 12px; /* Adjusted font size for mobile */
+    padding: 3px 6px; /* Adjusted padding for mobile */
+  }
+
+  /* Adjustments for mobile */
+
+  .about-desc2 {
+    left: 40%; /* Adjusted position for mobile */
+    top: 70%; /* Adjusted position for mobile */
+  }
+
+  .about-desc3 {
+    left: 40%; /* Adjusted position for mobile */
+    top: 73%; /* Adjusted position for mobile */
+  }
+
+  .book2 {
+    top: 28%; /* Adjusted position for mobile */
+    left: 35%; /* Adjusted position for mobile */
+  }
+
+  .contactUs {
+    top: 38%; /* Adjusted position for mobile */
+  }
+
+  .address {
+    top: 45%; /* Adjusted position for mobile */
+  }
+  .last{
+    top:150%;
+  }
+}
+
+
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <header>
+      <div class="container">
+          <img src="pictures/logo.jpeg" alt="..." class="positioned-image">
+           <nav>
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+              </ul>
+         </nav>
+         <a href="gallery.html" class="gallery">GALLERY</a>
+    </div>
+
+  </header>
+
+  <div class="services">
+    <h1 class="services-desc">OUR SERVICES </h1>
+  </div>
+
+  <h1 class="ponytails">PONYTAILS</h1>
+  <img src="pictures/ponytail1.jpg" alt="..." class="ponytail1">
+  <img src="pictures/ponytail2.jpg" alt="..." class="ponytail2">
+  <img src="pictures/ponytail3.jpg" alt="..." class="ponytail3">
+
+  <h1 class="ponytail-desc">You can customize your ponytail anyway you want.It can be sleeked high or low.It can be curly,straight,or puffy.It is all up to you!!</h1>
+
+  <h1 class="half-up-half-down">HALF UP,HALF DOWN</h1>
+  <img src="pictures/mzoro1.jpeg" alt="..." class="half1">
+  <img src="pictures/half1.jpg" alt="..." class="half2">
+  <img src="pictures/half2.jpg" alt="..." class="half3">
+
+  <h1 class="sew-in">SEW-INS</h1>
+  <img src="pictures/sew1.jpg" alt="..." class="sew1">
+  <img src="pictures/sew2.jpg" alt="..." class="sew2">
+  <img src="pictures/majtie1.jpeg" alt="..." class="sew3">
+
+  <img src="pictures/pricelist.jpeg" alt="..." class="pricelist">
+
+  <h1 class="note">PLEASE NOTE:</h1>
+  <h1 class="note-desc">We do not accept walk-ins.Please kindly book your appointment</h1>
+
+
+  <div class="last">
+    <h1 class="last-header">
+      SLEEKED,Gorgeos inside out
+    </h1>
+    <h2 class="last-par1">
+      Discover Your Personalized Beauty Haven @SLEEKED,Gorgeos inside out
+    </h2>
+    <a href="" class="book2">BOOK NOW</a>
+    <h1 class="contactUs">CONTACT US</h1>
+
+    <h3 class="address">Sleeked<br><br>61 Gomery Avenue<br><br>Summerstrand,Gqeberha,6001<br><br>info@sleeked.co.za<br><br>0653861455</h3>
+
+  </div>
+
+
+  
+</body>
+</html>

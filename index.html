@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sleeked</title>
+
+  <style>
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative; 
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  z-index: 1000; 
+}
+header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-left: 40px; 
+      font-size: 25px;
+        font-weight: bold;
+    }
+
+    header nav ul li:first-child {
+      margin-left: 30%; 
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color:black;
+    }
+
+    header nav ul li a:hover {
+      color: rgb(230, 113, 168);
+    }
+
+.background-container {
+  position: relative;
+  height: 100%;
+  background-image: url('pictures/ThePinkLabelSalon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); 
+  z-index: -1; 
+}
+
+.content {
+  padding-top: 100px; 
+  color: white;
+}
+.background-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.positioned-image{
+    position: absolute;
+      top: 65%; 
+      left: 10px; 
+      transform: translateY(-50%); 
+      border-radius: 50%;
+      width: 80px; 
+      height: 80px; 
+      object-fit: cover;
+      z-index: 1;
+}
+.gallery{
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color:rgb(230, 113, 168);
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+    
+}
+.gallery a:hover{
+    color: white;
+}
+.slogan1{
+    position: absolute;
+    left: 45%;
+    top:240%;
+    color:black;
+    font-weight: bold;
+}
+.slogan2{
+    position: absolute;
+    left: 25%;
+    top:250%;
+    color:black;
+    font-size: 40px;
+    font-weight: bold;
+}
+#slogan {
+      color: rgb(111, 2, 75);
+    }
+.last-word {
+     color: goldenrod;
+}
+.whatsapp-link{
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top:450%;
+    left:47%;
+    width: 4%;
+    height: 50%;
+    
+}
+.whatsapp-link:hover{
+   background-color: green;
+   color: green;
+}
+.insta-link{
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top:450%;
+    left:55%;
+    width: 4%;
+    height: 50%;
+}
+.insta-link a:hover{
+    color: purple;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 430px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  header nav ul li {
+    margin-left: 10px; 
+    font-size: 12px;
+  }
+
+  .positioned-image {
+    width: 60px; 
+    height: 60px; 
+  }
+
+  .gallery {
+    font-size: 12px;
+    padding: 3px 6px; 
+    left: 80%;
+  }
+
+  .slogan1 {
+    font-size: 15px;
+    left: 35%;
+    top: 220%;
+  }
+
+  .slogan2 {
+    font-size: 19px;
+    left: 20%;
+    top: 230%;
+  }
+
+  .whatsapp-link, .insta-link {
+    width: 8%;
+    height: 30%;
+    top: 300%;
+  }
+}
+
+
+
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <header>
+      <div class="container">
+          <img src="pictures/logo.jpeg" alt="..." class="positioned-image">
+           <nav>
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+              </ul>
+         </nav>
+         <a href="gallery.html" class="gallery">GALLERY</a>
+    </div>
+
+    <section id="section1">
+        <div class="slogan1">
+            <h3>WELCOME TO SLEEKED</h4>
+
+        </div>
+        <div class="slogan2">
+            <h2 id="slogan">Ponytails, Sew-ins, and </h2>
+        </div>
+        
+        <a href="https://www.youtube.com/@DrakeOfficial" target="_blank" >
+            <img src="pictures/whatsapp.png" alt="Button Image" class="whatsapp-link">
+        </a>
+
+        <a href="https://www.youtube.com/@DrakeOfficial" target="_blank" >
+            <img src="pictures/insta.png" alt="Button Image" class="insta-link">
+        </a>
+
+    </section>
+
+
+  </header>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  var words = ['installs', 'lashes', 'half-up-half-down'];
+  var index = 0; 
+  function updateSlogan() {
+    var sloganElement = document.getElementById('slogan');
+    var currentWord = words[index];
+    index = (index + 1) % words.length;
+    sloganElement.textContent = 'ponytails,sew-ins and ' ;
+    sloganElement.innerHTML += '<span class="last-word">' + currentWord + '</span>';
+    sloganElement.style.color = 'rgb(111, 2, 75)';
+    
+  }
+  updateSlogan();
+
+  setInterval(updateSlogan, 3000);
+});
+
+  </script>
+
+  <div class="background-container">
+    <!-- Content goes here -->
+  </div>
+</body>
+</html>

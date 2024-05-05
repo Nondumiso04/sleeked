@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sleeked</title>
+
+  <style>
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative; 
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  z-index: 1000; 
+}
+header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-left: 40px; 
+      font-size: 25px;
+        font-weight: bold;
+    }
+
+    header nav ul li:first-child {
+      margin-left: 30%; 
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color:black;
+    }
+
+    header nav ul li a:hover {
+      color: rgb(230, 113, 168);
+    }
+
+.content {
+  padding-top: 100px; 
+  color: white;
+}
+
+.positioned-image{
+    position: absolute;
+      top: 65%; 
+      left: 10px; 
+      transform: translateY(-50%); 
+      border-radius: 50%;
+      width: 80px; 
+      height: 80px; 
+      object-fit: cover;
+      z-index: 1;
+}
+.gallery{
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color:rgb(230, 113, 168);
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+    
+}
+.gallery:hover{
+    background-color: white;
+    color: rgb(230, 113, 168); /* Adjust the text color when hovering */
+}
+.about{
+    background-color:rgb(230, 113, 168);
+    height: 500px;
+}
+.about-desc{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    color: white;
+    text-underline-position: below;
+}
+.about-pic1{
+    position: absolute;
+    top:135%;
+    transform: translateY(-50%); 
+    border-radius: 50%;
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover;
+    z-index: 1;
+}
+.about1{
+    position: absolute;
+    top:107%;
+    left:55%;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(230, 113, 168);
+
+}
+.about2{
+    position: absolute;
+    top:113%;
+    left:48%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.about-desc2{
+    position: absolute;
+    top: 120%;
+    left: 38%;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.about-desc3{
+    position: absolute;
+    top: 126%;
+    left: 48%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.book{
+    position: absolute;
+    top: 136%;
+    left: 60%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color:rgb(230, 113, 168);
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+.mission-pic{
+    position: absolute;
+    top:230%;
+    left: 65%;
+    transform: translateY(-50%); 
+    border-radius: 50%;
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover;
+    z-index: 1;
+}
+.mission-header{
+    position: absolute;
+    top:200%;
+    left:20%;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(230, 113, 168);
+}
+.mission-desc{
+    position: absolute;
+    top: 210%;
+    left: 2%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.last{
+    background-color: rgb(230, 113, 168);
+    height: 500px;
+    position: relative;
+    top: 200%;
+}
+.last-header{
+  position: absolute;
+    top: 1%;
+    left: 35%;
+    color: white;
+    text-underline-position: below;
+}
+.last-par1{
+  position: absolute;
+    top: 10%;
+    left: 20%;
+    color: white;
+    
+}
+.book2{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: white;
+    color: black; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+.contactUs{
+  position: absolute;
+    top: 35%;
+    left: 39%;
+    color: white;
+    
+}
+.address{
+  position: absolute;
+    top: 45%;
+    left: 42%;
+    color: white;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 430px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  header nav ul li {
+    margin-left: 10px; 
+    font-size: 12px;
+  }
+
+  .positioned-image {
+    width: 60px; 
+    height: 60px; 
+  }
+
+  .gallery {
+    font-size: 12px;
+    padding: 3px 6px; 
+    left: 78%;
+  }
+
+  .about-desc {
+    font-size: 12px;
+    left: 40%;
+    top: 30%;
+  }
+
+
+  .about-pic1 {
+    width: 150px; 
+    height: 150px;
+    top: 75%;
+  }
+  .about1{
+    top: 65%;
+    font-size: 13px;
+  }
+  .about2{
+    top: 67%;
+    font-size: 12px;
+  }
+  .about{
+    font-size: 12px; /* Adjusted font size for mobile */
+  }
+
+  .about-desc2, .about-desc3 {
+    font-size: 10px; /* Adjusted font size for mobile */
+  }
+
+  .book {
+    font-size: 12px; /* Adjusted font size for mobile */
+    padding: 3px 6px; /* Adjusted padding for mobile */
+    top: 78%;
+  }
+
+  .mission-pic {
+    width: 150px; /* Adjusted size for mobile */
+    height: 150px; /* Adjusted size for mobile */
+    top: 100%;
+  }
+
+  .mission-header {
+    font-size: 12px; /* Adjusted font size for mobile */
+    top: 90%;
+    left: 15%;
+  }
+
+  .mission-desc {
+    font-size: 10px; /* Adjusted font size for mobile */
+    top:95%;
+  }
+
+  .last-header, .last-par1, .contactUs, .address {
+    font-size: 12px; /* Adjusted font size for mobile */
+  }
+
+  .book2 {
+    font-size: 12px; /* Adjusted font size for mobile */
+    padding: 3px 6px; /* Adjusted padding for mobile */
+  }
+
+  /* Adjustments for mobile */
+
+  .about-desc2 {
+    left: 40%; /* Adjusted position for mobile */
+    top: 70%; /* Adjusted position for mobile */
+  }
+
+  .about-desc3 {
+    left: 40%; /* Adjusted position for mobile */
+    top: 73%; /* Adjusted position for mobile */
+  }
+
+  .book2 {
+    top: 28%; /* Adjusted position for mobile */
+    left: 35%; /* Adjusted position for mobile */
+  }
+
+  .contactUs {
+    top: 38%; /* Adjusted position for mobile */
+  }
+
+  .address {
+    top: 45%; /* Adjusted position for mobile */
+  }
+  .last{
+    top:60%;
+  }
+}
+
+
+  
+
+  
+
+
+  
+  </style>
+
+</head>
+
+
+<body>
+  <header>
+      <div class="container">
+          <img src="pictures/logo.jpeg" alt="..." class="positioned-image">
+           <nav>
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+              </ul>
+         </nav>
+         <a href="gallery.html" class="gallery">GALLERY</a>
+    </div>
+
+   
+  </header>
+
+  <div class="about">
+    <h1 class="about-desc">ABOUT US</h1>
+  </div>
+
+  <p>
+    Everything we do at SLEEKED is motivated by commitment to discovering and
+     shaping the story you want tell through your personal style
+  </p>
+
+  <img src="pictures/majtie1.jpeg" alt="..." class="about-pic1">
+
+  <h1 class="about1">ABOUT SLEEKED</h1>
+  <h1 class="about2">When You Look Good, You Feel Good</h1>
+  <p class="about-desc2">We specialize in ponytails, sew-ins, half-up half-dow both glued and sewed, and more.</p>
+    <p class="about-desc3">Describe what you want and we'll give you exactly that.</p>
+
+    <a href="" class="book">BOOK NOW</a>
+
+    <img src="pictures/mzoro1.jpeg" alt="..." class="mission-pic">
+    <h1 class="mission-header">OUR MISSION</h1>
+    <p class="mission-desc">SLEEKED envisions a haven where style meets precision.
+        With skilled hairstylists,<br><br>and a commitment to excellence,
+        we craft experiences that redefine grooming and<br><br> elevate personal expression.</p>
+       
+  <div class="last">
+    <h1 class="last-header">
+      SLEEKED,Gorgeos inside out
+    </h1>
+    <h2 class="last-par1">
+      Discover Your Personalized Beauty Haven @SLEEKED,Gorgeos inside out
+    </h2>
+    <a href="" class="book2">BOOK NOW</a>
+    <h1 class="contactUs">CONTACT US</h1>
+
+    <h3 class="address">Sleeked<br><br>61 Gomery Avenue<br><br>Summerstrand,Gqeberha,6001<br><br>info@sleeked.co.za<br><br>0653861455</h3>
+
+  </div>
+</body>
+</html>

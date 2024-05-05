@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sleeked</title>
+
+  <style>
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative; 
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  z-index: 1000; 
+}
+header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-left: 40px; 
+      font-size: 25px;
+        font-weight: bold;
+    }
+
+    header nav ul li:first-child {
+      margin-left: 30%; 
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color:black;
+    }
+
+    header nav ul li a:hover {
+      color: rgb(230, 113, 168);
+    }
+
+.background-container {
+  position: relative;
+  height: 100%;
+  background-image: url('pictures/ThePinkLabelSalon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); 
+  z-index: -1; 
+}
+
+.content {
+  padding-top: 100px; 
+  color: white;
+}
+.background-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.positioned-image{
+    position: absolute;
+      top: 65%; 
+      left: 10px; 
+      transform: translateY(-50%); 
+      border-radius: 50%;
+      width: 80px; 
+      height: 80px; 
+      object-fit: cover;
+      z-index: 1;
+}
+.gallery{
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color:rgb(230, 113, 168);
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+    
+}
+.gallery a:hover{
+    color: white;
+}
+.contact{
+    background-color:rgb(230, 113, 168);
+    height: 500px;
+}
+.contact-desc{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+    text-underline-position: below;
+}
+.contact-desc2{
+  position: absolute;
+    top: 90%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.contact-container{
+  position: absolute;
+    top: 110%;
+    left: 35%;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.contact-input{
+  width: 400px;
+  height: 50px;
+  outline:none;
+  padding-left: 50px;
+  font-weight: 500;
+  
+}
+.contact-form textarea{
+  height: 100px;
+}
+.contact-input:focus{
+  border: 2px solid rgb(230, 113, 168);
+}
+.contact-input::placeholder{
+  color:black;
+}
+.contact-form button{
+  position: absolute;
+  top: 105%;
+  left: 30%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color:rgb(230, 113, 168);
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+.conclusion{
+  position: absolute;
+    top: 170%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.insta-link{
+  border: none;
+    cursor: pointer;
+    position: absolute;
+    top:180%;
+    left:0;
+    width: 10%;
+    height: 20%;
+}
+.last{
+    background-color: rgb(230, 113, 168);
+    height: 500px;
+    position: relative;
+    top: 130%;
+}
+.last-header{
+  position: absolute;
+    top: 1%;
+    left: 35%;
+    color: white;
+    text-underline-position: below;
+}
+.last-par1{
+  position: absolute;
+    top: 10%;
+    left: 20%;
+    color: white;
+    
+}
+.book2{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: white;
+    color: black; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+.contactUs{
+  position: absolute;
+    top: 35%;
+    left: 39%;
+    color: white;
+    
+}
+.address{
+  position: absolute;
+    top: 45%;
+    left: 42%;
+    color: white;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 430px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  header nav ul li {
+    margin-left: 10px; 
+    font-size: 12px;
+    
+  }
+
+  .positioned-image {
+    width: 60px; 
+    height: 60px; 
+  }
+
+  .gallery {
+    font-size: 12px;
+    padding: 3px 6px; 
+    left: 75%;
+    
+  }
+
+  .contact-desc {
+    font-size: 12px;
+    left: 40%;
+    top: 30%;
+  }
+  .contact-desc2{
+    top: 55%;
+  }
+  .contact-container{
+    top: 70%;
+    left: 14%;
+  }
+  .contact-input{
+    width: 150px;
+  }
+  .conclusion{
+    top: 110%;
+  }
+  .insta-link{
+    top: 115%;
+    width: 40px;
+    height: 40px;
+  }
+
+
+  
+  .contact{
+    font-size: 12px; /* Adjusted font size for mobile */
+  }
+
+  .book {
+    font-size: 12px; /* Adjusted font size for mobile */
+    padding: 3px 6px; /* Adjusted padding for mobile */
+    top: 78%;
+  }
+
+  .last-header, .last-par1, .contactUs, .address {
+    font-size: 12px; /* Adjusted font size for mobile */
+  }
+
+  .book2 {
+    font-size: 12px; /* Adjusted font size for mobile */
+    padding: 3px 6px; /* Adjusted padding for mobile */
+  }
+
+  .book2 {
+    top: 28%; /* Adjusted position for mobile */
+    left: 35%; /* Adjusted position for mobile */
+  }
+
+  .contactUs {
+    top: 38%; /* Adjusted position for mobile */
+  }
+
+  .address {
+    top: 45%; /* Adjusted position for mobile */
+  }
+  .last{
+    top:70%;
+  }
+}
+
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <header>
+      <div class="container">
+          <img src="pictures/logo.jpeg" alt="..." class="positioned-image">
+           <nav>
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+              </ul>
+         </nav>
+         <a href="gallery.html" class="gallery">GALLERY</a>
+    </div>
+
+  </header>
+
+  <div class="contact">
+    <h1 class="contact-desc">CONTACT US </h1>
+  </div>
+
+  <h1 class="contact-desc2">Leave us a message or enquire about anything and we'll get back to you</h1>
+
+  <div class="contact-container">
+
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+
+      <input type="hidden" name="access_key" value="51c53e9c-e3f1-4619-93e1-cd0bbd10f1b3">
+  
+      <input type="text" name="name" placeholder="Your Name" class="contact-input"required>
+      <input type="email" name="email"placeholder="Your Email" class="contact-input" required>
+      <textarea name="message"placeholder="Message/Enquiry"class="contact-input" required></textarea>
+      <button type="submit">Submit</button>
+  
+    </form>
+
+  </div>
+
+  <h1 class="conclusion">You can also follow us on instagram for updates</h1>
+  <a href="https://www.instagram.com/sleeked_____/" target="_blank" >
+    <img src="pictures/insta.png" alt="Button Image" class="insta-link">
+</a>
+
+<div class="last">
+  <h1 class="last-header">
+    SLEEKED,Gorgeos inside out
+  </h1>
+  <h2 class="last-par1">
+    Discover Your Personalized Beauty Haven @SLEEKED,Gorgeos inside out
+  </h2>
+  <a href="" class="book2">BOOK NOW</a>
+  <h1 class="contactUs">CONTACT US</h1>
+
+  <h3 class="address">Sleeked<br><br>61 Gomery Avenue<br><br>Summerstrand,Gqeberha,6001<br><br>info@sleeked.co.za<br><br>0653861455</h3>
+
+</div>
+  
+
+</body>
+</html>

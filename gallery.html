@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sleeked</title>
+
+  <style>
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative; 
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  z-index: 1000; 
+}
+header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-left: 40px; 
+      font-size: 25px;
+        font-weight: bold;
+    }
+
+    header nav ul li:first-child {
+      margin-left: 30%; 
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color:black;
+    }
+
+    header nav ul li a:hover {
+      color: rgb(230, 113, 168);
+    }
+
+.background-container {
+  position: relative;
+  height: 100%;
+  background-image: url('pictures/ThePinkLabelSalon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); 
+  z-index: -1; 
+}
+
+.content {
+  padding-top: 100px; 
+  color: white;
+}
+.background-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.positioned-image{
+    position: absolute;
+      top: 65%; 
+      left: 10px; 
+      transform: translateY(-50%); 
+      border-radius: 50%;
+      width: 80px; 
+      height: 80px; 
+      object-fit: cover;
+      z-index: 1;
+}
+.gallery{
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color:rgb(230, 113, 168);
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-block; 
+    
+}
+.gallery a:hover{
+    color: white;
+}
+.gallery2{
+    background-color:rgb(230, 113, 168);
+    height: 500px;
+}
+.gallery-desc{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+    text-underline-position: below;
+}
+
+
+
+
+
+
+/* Style for the gallery */
+.gallery3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.gallery3 img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd; /* Optional: Add borders */
+}
+
+/* Style for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+/* Style for the modal content */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Style for the close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 430px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  header nav ul li {
+    margin-left: 10px; 
+    font-size: 12px;
+  }
+
+  .positioned-image {
+    width: 60px; 
+    height: 60px; 
+  }
+
+  .gallery {
+    font-size: 12px;
+    padding: 3px 6px; 
+    left: 78%;
+  }
+
+  .gallery-desc {
+    font-size: 12px;
+    left: 40%;
+    top: 30%;
+  }
+
+
+  .about-pic1 {
+    width: 150px; 
+    height: 150px;
+    top: 75%;
+  }
+  .about1{
+    top: 65%;
+    font-size: 13px;
+  }
+  .about2{
+    top: 67%;
+    font-size: 12px;
+  }
+  .gallery{
+    font-size: 12px; /* Adjusted font size for mobile */
+  }
+
+  .about-desc2, .about-desc3 {
+    font-size: 10px; /* Adjusted font size for mobile */
+  }
+
+  .book {
+    font-size: 12px; /* Adjusted font size for mobile */
+    padding: 3px 6px; /* Adjusted padding for mobile */
+    top: 78%;
+  }
+
+ 
+
+  .last-header, .last-par1, .contactUs, .address {
+    font-size: 12px; /* Adjusted font size for mobile */
+  }
+
+  .book2 {
+    font-size: 12px; /* Adjusted font size for mobile */
+    padding: 3px 6px; /* Adjusted padding for mobile */
+  }
+
+  /* Adjustments for mobile */
+
+  .about-desc2 {
+    left: 40%; /* Adjusted position for mobile */
+    top: 70%; /* Adjusted position for mobile */
+  }
+
+  .about-desc3 {
+    left: 40%; /* Adjusted position for mobile */
+    top: 73%; /* Adjusted position for mobile */
+  }
+
+  .book2 {
+    top: 28%; /* Adjusted position for mobile */
+    left: 35%; /* Adjusted position for mobile */
+  }
+
+  .contactUs {
+    top: 38%; /* Adjusted position for mobile */
+  }
+
+  .address {
+    top: 45%; /* Adjusted position for mobile */
+  }
+  .last{
+    top:60%;
+  }
+}
+
+
+
+
+  </style>
+
+</head>
+
+
+<body>
+  <header>
+      <div class="container">
+          <img src="pictures/logo.jpeg" alt="..." class="positioned-image">
+           <nav>
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+              </ul>
+         </nav>
+         <a href="gallery.html" class="gallery">GALLERY</a>
+    </div>
+
+  </header>
+
+  <div class="gallery2">
+    <h1 class="gallery-desc">OUR GALLERY </h1>
+  </div>
+
+  <div class="gallery3">
+    <img src="pictures/majtie1.jpeg" alt="Image 1" onclick="openModal('pictures/majtie1.jpeg')">
+    <img src="pictures/mzoro1.jpeg" alt="Image 2" onclick="openModal('pictures/mzoro1.jpeg')">
+    <img src="pictures/ponytail1.jpg" alt="Image 3" onclick="openModal('pictures/ponytail1.jpg')">
+    <img src="pictures/karabo.jpeg" alt="Image 1" onclick="openModal('pictures/karabo.jpeg')">
+    <img src="pictures/dumi.jpeg" alt="Image 2" onclick="openModal('pictures/dumi.jpeg')">
+    <img src="pictures/matyi.jpeg" alt="Image 3" onclick="openModal('pictures/matyi.jpeg')">
+    <img src="pictures/owam.jpeg" alt="Image 1" onclick="openModal('pictures/owam.jpeg')">
+    <img src="pictures/d36934ab4fb8f3676662657c20863137.jpg" alt="Image 2" onclick="openModal('pictures/d36934ab4fb8f3676662657c20863137.jpg')">
+    <img src="pictures/dumi2.jpeg" alt="Image 3" onclick="openModal('pictures/dumi2.jpeg')">
+    <img src="pictures/ponytail2.jpg" alt="Image 1" onclick="openModal('pictures/ponytail2.jpg')">
+    <img src="pictures/half1.jpg" alt="Image 2" onclick="openModal('pictures/half1.jpg')">
+    <img src="pictures/half2.jpg" alt="Image 3" onclick="openModal('pictures/half2.jpg')">
+    <!-- Add more images as needed -->
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
+<script >
+    // Open the modal with the clicked image
+function openModal(imageUrl) {
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById('modalImg');
+    modal.style.display = 'block';
+    modalImg.src = imageUrl;
+}
+
+// Close the modal when clicking on the close button or outside the modal
+function closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+}
+
+// Close the modal when clicking outside the modal
+window.onclick = function(event) {
+    var modal = document.getElementById('myModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+</script>
+</body>
+
+  
+
+
+ 
+
+
+  
+</body>
+</html>
